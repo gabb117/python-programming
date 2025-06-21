@@ -1,0 +1,84 @@
+@startuml house
+class dict{
+attributes
+
+methods()
+}
+'dict class: a dictionary that collects and models a collection of data/objects in the form of a key/value pair
+
+class house{
+__code        
+__price      
+__rooms         
+__sm           
+__elevator     
+__condominium  
+__garage       
+__address      
+__pc          
+__townHall     
+__province     
+__owner   
+
+__init__(code,price,rooms,sm,elev,cond,garage,addr,pc,townh,prov,owner)
+__str__()
+set_<Aname>(<Aval>)
+get_<Aname>()
+get_all_info()
+}
+dict "1" o-- "*" house
+
+' alphanumeric identification code
+' price of the house
+' number of rooms
+' square meters
+' presence of lift [Y/N]
+' if house is condominium [Y/N]
+' if it has a garage [Y/N]
+' house number
+' contain 5 digit postal code
+' name of municipality
+' abbreviation of the province
+' owner information 
+
+' Setter method that memorize/update the value of the attributes
+' They do not take parameters but return/read 
+' the value of the attributes
+
+'__str__ = standard private method that returns a string for displaying objects of the class
+'get_all_info = returns a formatted string for writing information about objects in the class to a CSV text file
+'__init__ = It is the constructor method of the objects, it receives as parameters the values ​​of all the attributes and stores them in variables, it returns an object/instance
+
+class person {
+    __name
+    __surname
+    __telephone
+    __cellphone
+
+    __init__(name,surname,telephone,cellphone)
+    __str__()
+    set_<Aname>(<Aval>)
+    get_<Aname>()
+    get_all_info()
+
+
+}
+house "1" *-- "1" person
+@enduml
+
+'Cardinality = The numbers between links in UML classes refer to multiplicity, that is
+'how many instances of one class can be associated with an instance of the other.
+'1 to * (all), * to *, 1 to 1, * to 1.
+
+'Types of links between classes (relationships/associations):
+
+'Generic association = a class has an attribute whose value is an instance of another class or collection of instances of another class
+'there is a direct relationship
+' 		--|> o <|-- (heredity)
+
+'Aggregative association = a class has an attribute whose value is an instance of another class, there is no exclusive ownership
+'in fact the secondary class can exist even if the primary is destroyed
+'       o-- (aggregation) 
+
+'Compositional association = a class has an attribute whose value is an instance of another class with exclusive possession of the part,
+'if the first class is destroyed also the second class is destroyed too. *--  (composition) 

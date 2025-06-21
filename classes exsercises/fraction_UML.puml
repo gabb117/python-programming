@@ -1,0 +1,17 @@
+@startuml fraction
+class fraction{
+    __n
+    __d
+    
+    __init__(num,den)
+    __str__()
+    __MCD(x,y)
+    calculate_value()
+    simplify()
+    sum(f2)
+    diff(f2)
+    multiplication(f2)
+    division(f2)
+
+}
+@enduml

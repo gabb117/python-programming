@@ -1,0 +1,73 @@
+'relationship of specialization or inheritance
+@startuml class_hierarchy
+class carnivorous_mammal {
+    __age
+    __life_expectancy
+    __character
+    __hair_type
+    __hair_color
+    __race
+    
+    __init__(age,life,character,\nhair,color,race)
+    __str__()
+    getter() 
+    setter(aValue)
+    communicate()
+    print_legend()
+   
+}
+carnivorous_mammal <|--- feline 
+carnivorous_mammal <|--- canid
+'relationship of specialization or inheritance
+
+class feline{
+    __habitat
+    __prey
+
+    __init__(age,life,character,\nhair,color,race,habitat,prey)
+    __str__()
+    getter()
+    setter(aValue)
+    print_legend()
+}
+feline <|--- cat
+'relationship of specialization or inheritance
+
+class canid{
+    __size
+    __origin
+    
+    __init__(age,life,character,\nhair,color,race,size,origin)
+    __str__()
+    getter()
+    setter(aValue)
+    print_legend()
+}
+canid <|--- dog
+'relationship of specialization or inheritance
+
+class cat{
+    __name
+
+    __init__(age,life,character,hair,\ncolor,race,habitat,prey,name)
+    __str__()
+    getter()
+    setter(aValue)
+    communicate()
+    print_legend()
+}
+
+
+class dog{
+    __name
+    __used_for
+
+    __init__(age,life,character,hair,\ncolor,race,size,origin,name,used_to)
+    __str__()
+    getter()
+    setter(aValue)
+    communicate()
+    print_legend()
+}
+
+@enduml
