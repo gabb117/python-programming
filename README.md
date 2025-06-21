@@ -17,7 +17,7 @@ It starts from the basics with simple exercises and progresses to more complex a
 - Python 3.x
 - `random` module
 - `re` module
-- (optional) `numpy`, `pymysql`, `plantuml`
+- `numpy`, `pymysql`, `plantuml`
 
 ## Author
 
